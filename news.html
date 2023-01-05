@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>spotted_bs._</title>
+    <link rel="shortcut icon" href="icons/icon.ico"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" href="icons/icona1.png">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#4287f5"/>
+    <link rel="manifest" href="manifest.json">
+    <script>
+        navigator.serviceWorker.getRegistration()
+.then(function(registration) {
+    if(registration){
+        registration.unregister()
+        .then(
+            function(success) {
+                // if success = true, unregister was successful
+                });
+        }
+    });
+</script>
+<script>
+    if ('caches' in window) {
+caches.keys()
+  .then(function(keyList) {
+      return Promise.all(keyList.map(function(key) {
+          return caches.delete(key);
+      }));
+  })
+}
+</script>
+<script>
+    //if browser support service worker
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    };
+</script>
+</head>
+<body>
+    
+    <!--menu contestuale-->
+    <div class="menu">
+        <ul class="listmenu">
+          <li class="menuoptionfirst" onclick="goBack()">Indietro</li>
+          <li class="menuoption" onclick="goForward()">Avanti</li>
+          <li class="menuoption" onclick="reload()">Ricarica</li>
+          <li class="menuoption" onclick="deleteItems()">Cancella cookie</li>
+          <li class="menuoptionlast" onclick="toggleFullScreen()">Fullscreen</li>
+        </ul>
+    </div>
+
+    <!--inizio interfaccia-->
+
+    <!--bottone ritorno-->
+    <div class="back" onclick="goBack()">
+      <img class="back_image" src="icons/back.svg">
+    </div>
+
+  <h2 class="maintitle">NEWS</h2>
+  <br>
+  <h3 class="paragrafo">Tutte le ultime notizie create e redatte da noi</h3>
+
+    <div class="spinner" id="box_spinner"></div>
+
+    <style>
+    .spinner {
+    position:fixed;
+    width: 56px;
+    height: 56px;
+    top: 40%;
+    left:43%;
+    border-radius: 50%;
+    background: radial-gradient(farthest-side,#474bff 94%,#0000) top/9px 9px no-repeat,
+            conic-gradient(#0000 30%,#474bff);
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 0);
+    animation: spinner-c7wet2 0.8s infinite linear;
+    }
+
+    @keyframes spinner-c7wet2 {
+    100% {
+        transform: rotate(1turn);
+    }
+    }
+    </style>
+    <script>
+        setTimeout(() => {
+  const box = document.getElementById('box_spinner');
+
+  // 👇️ removes element from DOM
+  box.style.display = 'none';
+
+  // 👇️ hides element (still takes up space on page)
+  // box.style.visibility = 'hidden';
+}, 3000); // 👈️ time in milliseconds
+    </script>
+    <iframe id="iframe_documents" src="https://drive.google.com/embeddedfolderview?id=1Z8Qc1C-mn0kfF0pEE3IteyQW1Nmi1IFs#grid" style="width:110%; height:600px; border:0;"></iframe>
+    <br>
+    <a href="https://mega.nz/folder/kHMiDaDC#fq3AenUcWPp6f5Y2TK_sNA"><button id="bottone_spot">Accedi all'archivio</button></a>
+    <br><br>
+
+    <!--fine interfaccia-->
+
+    <!--cookie alert-->
+    <div class="flexcookies">
+        <div class="cookie-container">
+            <h4 id="cookiescritta">
+                Questo sito usa <a id="linkcookies"href="privacypolicy.html">cookie</a> che servono a salvare la conferma della visione delle informative o di schede
+            </h4>
+            <button class="cookie-btn">ACCETTA</button>
+        </div>
+    </div>
+
+    <!--script-->
+    <script src="cookie.js"></script>
+    <script src="contextmenu.js"></script>
+</body>

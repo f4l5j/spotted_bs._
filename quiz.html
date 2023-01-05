@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>spotted_bs._</title>
+    <link rel="shortcut icon" href="icons/icon.ico"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" href="icons/icona1.png">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#4287f5"/>
+    <link rel="manifest" href="manifest.json">
+    <script>
+        navigator.serviceWorker.getRegistration()
+.then(function(registration) {
+    if(registration){
+        registration.unregister()
+        .then(
+            function(success) {
+                // if success = true, unregister was successful
+                });
+        }
+    });
+</script>
+<script>
+    if ('caches' in window) {
+caches.keys()
+  .then(function(keyList) {
+      return Promise.all(keyList.map(function(key) {
+          return caches.delete(key);
+      }));
+  })
+}
+</script>
+<script>
+    //if browser support service worker
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    };
+</script>
+</head>
+<body>
+    
+    <!--menu contestuale-->
+    <div class="menu">
+        <ul class="listmenu">
+          <li class="menuoptionfirst" onclick="goBack()">Indietro</li>
+          <li class="menuoption" onclick="goForward()">Avanti</li>
+          <li class="menuoption" onclick="reload()">Ricarica</li>
+          <li class="menuoption" onclick="deleteItems()">Cancella cookie</li>
+          <li class="menuoptionlast" onclick="toggleFullScreen()">Fullscreen</li>
+        </ul>
+    </div>
+
+    <!--inizio interfaccia-->
+
+    <!--bottone ritorno-->
+    <div class="back" onclick="goBack()">
+      <img class="back_image" src="icons/back.svg">
+    </div>
+
+    <h1 class="maintitle">Quiz</h1>
+  <hr>
+  <p class="paragrafocentro">Il principale quiz su Brescia</p>
+  <hr>
+    <div class="first_quiz_container" onclick="location.href='quiz/brescia_quiz.html'">
+      <p class="first_quiz_name">Brescia</p>
+      <p class="first_quiz_paragrafo">Mettiti alla prova</p>
+    </div>
+    <h2 id="topscroll">Geografia</h2>
+    <div id="scrollingredienti">
+      <a href="quiz/geo1.html"><img class="scrollingrediente" src="images/geo1.png" alt="quiz"></a>
+      <a href="quiz/geo2.html"><img class="scrollingrediente" src="images/geo2.png" alt="quiz"></a>
+      <a href="quiz/geo3.html"><img class="scrollingrediente" src="images/geo3.png" alt="quiz"></a>
+      <a href="quiz/geo4.html"><img class="scrollingrediente" src="images/geo4.png" alt="quiz"></a>
+    </div><!--
+  <h2 id="topscroll">Storia</h2>
+    <div id="scrollingredienti">
+      <a href="quiz/sto1.html"><img class="scrollingrediente" src="images/sto1.png" alt="quiz"></a>
+      <a href="quiz/sto2.html"><img class="scrollingrediente" src="images/sto2.png" alt="quiz"></a>
+      <a href="quiz/sto3.html"><img class="scrollingrediente" src="images/sto3.png" alt="quiz"></a>
+      <a href="quiz/sto4.html"><img class="scrollingrediente" src="images/sto4.png" alt="quiz"></a>
+    </div>
+  <h2 id="topscroll">Arte</h2>
+    <div id="scrollingredienti">
+      <a href="quiz/art1.html"><img class="scrollingrediente" src="images/art1.png" alt="quiz"></a>
+      <a href="quiz/art2.html"><img class="scrollingrediente" src="images/art2.png" alt="quiz"></a>
+      <a href="quiz/art3.html"><img class="scrollingrediente" src="images/art3.png" alt="quiz"></a>
+      <a href="quiz/art4.html"><img class="scrollingrediente" src="images/art4.png" alt="quiz"></a>
+    </div>-->
+
+    <!--fine interfaccia-->
+
+    <!--cookie alert-->
+    <div class="flexcookies">
+        <div class="cookie-container">
+            <h4 id="cookiescritta">
+                Questo sito usa <a id="linkcookies"href="privacypolicy.html">cookie</a> che servono a salvare la conferma della visione delle informative o di schede
+            </h4>
+            <button class="cookie-btn">ACCETTA</button>
+        </div>
+    </div>
+
+    <!--script-->
+    <script src="cookie.js"></script>
+    <script src="contextmenu.js"></script>
+</body>
