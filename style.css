@@ -857,3 +857,9 @@ td{
     margin-right: auto;
     margin-top: 50px;
 }
+.qr{
+    max-width:300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
