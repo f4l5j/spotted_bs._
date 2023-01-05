@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>OBSpace</title>
+    <link rel="shortcut icon" href="../icons/icon.ico"/>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="apple-touch-icon" href="../icons/icona1.png">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#4287f5"/>
+    <link rel="manifest" href="../manifest.json">
+    <script>
+        navigator.serviceWorker.getRegistration()
+.then(function(registration) {
+    if(registration){
+        registration.unregister()
+        .then(
+            function(success) {
+                // if success = true, unregister was successful
+                });
+        }
+    });
+</script>
+<script>
+    if ('caches' in window) {
+caches.keys()
+  .then(function(keyList) {
+      return Promise.all(keyList.map(function(key) {
+          return caches.delete(key);
+      }));
+  })
+}
+</script>
+<script>
+    //if browser support service worker
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    };
+</script>
+</head>
+<body>
+    
+    <!--menu contestuale-->
+    <div class="menu">
+        <ul class="listmenu">
+          <li class="menuoptionfirst" onclick="goBack()">Indietro</li>
+          <li class="menuoption" onclick="goForward()">Avanti</li>
+          <li class="menuoption" onclick="reload()">Ricarica</li>
+          <li class="menuoption" onclick="deleteItems()">Cancella cookie</li>
+          <li class="menuoptionlast" onclick="toggleFullScreen()">Fullscreen</li>
+        </ul>
+    </div>
+
+    <!--inizio interfaccia-->
+
+    <!--bottone ritorno-->
+    <div class="back" onclick="goBack()">
+      <img class="back_image" src="../icons/back.svg">
+    </div>
+
+    <h1 class="maintitle">Switchel</h1>
+  <img src="images/switchel2.jpg" class="imgggschedule"alt="drink">
+  <br>
+  <div class="rapidinfo">
+    <div class="flexitemdetails">
+      <h3 class="itemdetails">Gusto</h3><h3 class="itemdetails">dolce speziato</h3>
+    </div>
+    <div class="flexitemdetails">
+      <h3 class="itemdetails">Grado alcolico</h3><h3 class="itemdetails">0</h3>
+    </div>
+    <img src="../icons/senzaglutine.png" class="certificazioni" alt="certificazioni">
+    <img src="../icons/senzalatte.png" class="certificazioni" alt="certificazioni">
+  </div>
+  <p class="paragrafo">Lo Switchel è una bevanda analcolica che veniva data ai nelle colonie americane per combattere la stanchezza. È considerata salutare per via degli ingredienti che hanno molti benefici come lo zenzero e il miele. Consigliato spesso a chi vuole recuperare energia perchè stanco, magari dopo una giornata stressante</p>
+  <p class="paragrafo">Ingredienti per 4 bicchieri, quindi circa 1/4 per 1</p>
+  <ul>
+    <li class="ingredient">Acqua 500 ml</li>
+    <li class="ingredient">Aceto di mele 250 ml</li>
+    <li class="ingredient">2 cucchiaia di miele</li>
+    <li class="ingredient">Zenzero fresco (non troppo)</li>
+  </ul>
+  <h2 class="titleschedule">Preparazione<img src="../icons/yellowcircle.png" class="difficolta" alt="certificazioni"></h2>
+  <p class="paragrafo">Prendere un contenitore una botiglia o qualcosa di simile che si possa agiatare bene. mettete tutti gli ingredienti dentro e agitate. Mettete in frigo per 24H poi filtrate la bevanda tramite uno strainer o un colino in un altro contenitore</p>
+    
+
+    <!--fine interfaccia-->
+
+    <!--cookie alert-->
+    <div class="flexcookies">
+        <div class="cookie-container">
+            <h4 id="cookiescritta">
+                Questo sito usa <a id="linkcookies"href="../privacypolicy.html">cookie</a> che servono a salvare la conferma della visione delle informative o di schede
+            </h4>
+            <button class="cookie-btn">ACCETTA</button>
+        </div>
+    </div>
+
+    <!--script-->
+    <script src="../cookie.js"></script>
+    <script src="../contextmenu.js"></script>
+</body>
