@@ -1,6 +1,6 @@
 {
-  "short_name": "Spotted Brescia",
-  "name": "Spotted Brescia",
+  "short_name": "spotted_bs._",
+  "name": "spotted_bs._",
   "icons": [
     {
       "src": "icons/icona1.png",
@@ -16,8 +16,8 @@
     }
   ],
   "start_url": "/index.html",
-  "description": "App di notizie gestita da spotted bresciacity",
+  "description": "App di spotted_bs._",
   "background_color": "#000000",
   "display": "standalone",
-  "theme_color": "#4287f5"
+  "theme_color": "#ffd5f5"
 }

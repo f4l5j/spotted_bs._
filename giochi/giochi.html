@@ -2,13 +2,13 @@
 <html lang="it">
 <head>
     <title>spotted_bs._</title>
-    <link rel="shortcut icon" href="icons/icon.ico"/>
-    <link rel="stylesheet" href="style.css">
-    <link rel="apple-touch-icon" href="icons/icona1.png">
+    <link rel="shortcut icon" href="../icons/icon.ico"/>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="apple-touch-icon" href="../icons/icona1.png">
     <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#4287f5"/>
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="../manifest.json">
     <script>
         navigator.serviceWorker.getRegistration()
 .then(function(registration) {
@@ -55,19 +55,13 @@ caches.keys()
 
     <!--bottone ritorno-->
     <div class="back" onclick="goBack()">
-      <img class="back_image" src="icons/back.svg">
-    </div>
+        <img class="back_image" src="../icons/back.svg">
+      </div>
 
-    <h1 class="maintitle">Patch Notes</h1>
-    <p class="paragrafo_sinistra">Nell'ultimo aggiornamento abbiamo:</p><br>
-    <ul id="lista_aggiornamenti">
-        <li class="lista_aggiornamenti_item">cambiato totalmente l'intefaccia</li>
-        <li class="lista_aggiornamenti_item">cambiato i colori</li>
-        <li class="lista_aggiornamenti_item">cambiato le icone delle funzioni</li>
-        <li class="lista_aggiornamenti_item">aggiunto il meteo e la qualità dell'aria</li>
-        <li class="lista_aggiornamenti_item">aggiunto la sezione admin</li>
-
-    </ul>
+    <h1 class="maintitle">Giochi</h1>
+    <br>
+    <div id="gioco"><script src="https://cdn.htmlgames.com/embed.js?game=DropTris&amp;bgcolor=white"></script></div>
+    <br>
 
     <!--fine interfaccia-->
 
@@ -75,13 +69,13 @@ caches.keys()
     <div class="flexcookies">
         <div class="cookie-container">
             <h4 id="cookiescritta">
-                Questo sito usa <a id="linkcookies"href="privacypolicy.html">cookie</a> che servono a salvare la conferma della visione delle informative o di schede
+                Questo sito usa <a id="linkcookies"href="../privacypolicy.html">cookie</a> che servono a salvare la conferma della visione delle informative o di schede
             </h4>
             <button class="cookie-btn">ACCETTA</button>
         </div>
     </div>
 
     <!--script-->
-    <script src="cookie.js"></script>
-    <script src="contextmenu.js"></script>
+    <script src="../cookie.js"></script>
+    <script src="../contextmenu.js"></script>
 </body>
