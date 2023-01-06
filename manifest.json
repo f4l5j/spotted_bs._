@@ -17,7 +17,7 @@
   ],
   "start_url": "/index.html",
   "description": "App di spotted_bs._",
-  "background_color": "#ffd5f5",
+  "background_color": "#fec5d9",
   "display": "standalone",
-  "theme_color": "#ffd5f5"
+  "theme_color": "#fec5d9"
 }
