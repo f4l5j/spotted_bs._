@@ -4,7 +4,6 @@ html{
     cursor: url('images/customcursor.cur'),auto;
 }
 body{
-    margin:0 0 50px 0;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -343,6 +342,7 @@ box-shadow: 0px 0px 0px 1000px rgba(0,0,0,0.75);
     overflow-x: hidden;
     width: 100%;
     padding-bottom:12px;
+    margin-top:50px;
     padding-top:12px;
     background-color: #ffd5f5;
     z-index: 1;
@@ -907,9 +907,7 @@ td{
     color: #ffffff;
     border: none;
     }
-#gioco{
-    transform: rotate(90deg);
-}
+
 .weatherwidget-io{
 margin:20px;
 }
@@ -919,6 +917,6 @@ margin:20px;
     justify-content:center;
     flex-direction: column;
     align-items: center;
-    transform: scale(1.05);
-    margin-bottom: 50px
+    transform: scale(1.00);
+    margin-bottom: 80px
 }
