@@ -206,6 +206,7 @@ box-shadow: 0px 0px 0px 1000px rgba(0,0,0,0.75);
     color: #ffffff;
     padding: 10px 15px;
     font-size: 20px;
+    margin-bottom:50px;
     border-radius: 8px;
 }
 .introduzione2-container{
@@ -259,6 +260,7 @@ box-shadow: 0px 0px 0px 1000px rgba(0,0,0,0.75);
     background-color:#2ad37b;
     color: #ffffff;
     padding: 10px 15px;
+    margin-bottom:50px;
     font-size: 20px;
     border-radius: 8px;
 }
@@ -313,6 +315,7 @@ box-shadow: 0px 0px 0px 1000px rgba(0,0,0,0.75);
     background-color:#2ad37b;
     color: #ffffff;
     padding: 10px 15px;
+    margin-bottom:50px;
     font-size: 20px;
     border-radius: 8px;
 }
