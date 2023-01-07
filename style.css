@@ -4,6 +4,7 @@ html{
     cursor: url('images/customcursor.cur'),auto;
 }
 body{
+    margin-bottom: 50px;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -912,11 +913,13 @@ td{
 margin:20px;
 }
 #airquality{
-    
     display: flex;
     justify-content:center;
     flex-direction: column;
     align-items: center;
     transform: scale(1.00);
     margin-bottom: 80px
+}
+#special_embeddedgame{
+    transform: rotate(90deg);
 }
