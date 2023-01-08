@@ -1061,7 +1061,7 @@ margin:20px;
     font-size: 53px;
     z-index: 20000000;
     color: #063478;
-    margin-top: 130px;
+    margin-top: 60px;
     margin-bottom:-158px;
     animation: benvenuti 1s ease 1400ms 1 normal forwards;
 }
@@ -1080,6 +1080,7 @@ margin:20px;
     margin-right: auto;
     opacity:0;
     padding-left:30px;
+    margin-top:60px;
     animation: quotes 1s ease 2000ms 1 normal forwards;
 }
 #quotes_a{
