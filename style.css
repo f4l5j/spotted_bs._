@@ -1049,5 +1049,57 @@ margin:20px;
     left:20%;
     z-index:2000000;
     opacity: 0;
+    display: none;
     transform: scale(0.02);
+}
+#benvenuti{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: 'Montserrat-Light';
+    font-size: 53px;
+    z-index: 20000000;
+    color: #063478;
+    margin-top: 130px;
+    margin-bottom:-158px;
+    animation: benvenuti 1s ease 1400ms 1 normal forwards;
+}
+@keyframes benvenuti {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+#quotes{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    opacity:0;
+    padding-left:30px;
+    animation: quotes 1s ease 2000ms 1 normal forwards;
+}
+#quotes_a{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position:absolute;
+    margin-top:-30px;
+    margin-bottom:-50px;
+    left:15%;
+    opacity: 0;
+    font-family: 'Montserrat-Light';
+    animation: quotes 1.5s ease 2000ms 1 normal forwards;
+}
+@keyframes quotes {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }
