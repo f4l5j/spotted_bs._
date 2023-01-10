@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>spotted_bs._</title>
+    <link rel="shortcut icon" href="../icons/icon.ico"/>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="apple-touch-icon" href="../icons/icona1.png">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#4287f5"/>
+    <link rel="manifest" href="../manifest.json">
+    <script>
+        navigator.serviceWorker.getRegistration()
+.then(function(registration) {
+    if(registration){
+        registration.unregister()
+        .then(
+            function(success) {
+                // if success = true, unregister was successful
+                });
+        }
+    });
+</script>
+<script>
+    if ('caches' in window) {
+caches.keys()
+  .then(function(keyList) {
+      return Promise.all(keyList.map(function(key) {
+          return caches.delete(key);
+      }));
+  })
+}
+</script>
+<script>
+    //if browser support service worker
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    };
+</script>
+</head>
+<body>
+    
+    <!--menu contestuale-->
+    <div class="menu">
+        <ul class="listmenu">
+          <li class="menuoptionfirst" onclick="goBack()">Indietro</li>
+          <li class="menuoption" onclick="goForward()">Avanti</li>
+          <li class="menuoption" onclick="reload()">Ricarica</li>
+          <li class="menuoption" onclick="deleteItems()">Cancella cookie</li>
+          <li class="menuoptionlast" onclick="toggleFullScreen()">Fullscreen</li>
+        </ul>
+    </div>
+
+    <!--inizio interfaccia-->
+
+    <div class="back" onclick="goBack()">
+        <img class="back_image" src="../icons/back.svg">
+      </div>
+
+      <h1 class="maintitle">Cibo Giapponese</h1>
+      <h2 id="topscroll">Ingredienti usati e salse</h2>
+      <div id="scrollingredienti">
+        <a href="ingredienti/#.html"><img class="scrollingrediente" src="images/#.jpg" alt="ingrediente"></a>
+        <a href="ingredienti/#.html"><img class="scrollingrediente" src="images/#.jpg" alt="ingrediente"></a>
+        <a href="ingredienti/#.html"><img class="scrollingrediente" src="images/#.jpg" alt="ingrediente"></a>
+        <a href="ingredienti/#.html"><img class="scrollingrediente" src="images/#.jpg" alt="ingrediente"></a>
+        <a href="ingredienti/#.html"><img class="scrollingrediente" src="images/#.jpg" alt="ingrediente"></a>
+      </div>
+      
+      
+        <div class="conteinerdrinks">
+          <div class="card" onclick="location.href='hosomaki.html'">
+              <img class="imggg" src="images/hosomaki.jpg" alt="Avatar">
+            <div class="container">
+              <h2><b>Hosomaki</b></h2>
+            </div>
+          </div>
+            <div class="card" onclick="location.href='uramaki.html'">
+                <img class="imggg" src="images/uramaki.jpg" alt="Avatar">
+              <div class="container">
+                <h2><b>Uramaki</b></h2>
+              </div>
+            </div>
+            <div class="card" onclick="location.href='futomaki.html'">
+                <img class="imggg" src="images/futomaki.jpg" alt="Avatar">
+              <div style="font-size:15px;" class="container">
+                <h2><b>Futomaki</b></h2>
+              </div>
+            </div>
+            <div class="card" onclick="location.href='nigiri.html'">
+                <img class="imggg" src="images/nigiri.jpg" alt="Avatar">
+              <div class="container">
+                <h2><b>Nigiri</b></h2>
+              </div>
+            </div>
+            <div class="card" onclick="location.href='temaki.html'">
+                <img class="imggg" src="images/temaki.jpg" alt="Avatar">
+              <div style="font-size:15px;" class="container">
+                <h2><b>Temaki</b></h2>
+              </div>
+            </div>
+            <div class="card" onclick="location.href='sashimi.html'">
+                <img class="imggg" src="images/sashimi.jpg" alt="Avatar">
+              <div class="container">
+                <h2><b>Sashimi</b></h2>
+              </div>
+            </div>
+        </div>
+
+    <!--fine interfaccia-->
+
+    <!--cookie alert-->
+    <div class="flexcookies">
+        <div class="cookie-container">
+            <h4 id="cookiescritta">
+                Questo sito usa <a id="linkcookies"href="../privacypolicy.html">cookie</a> che servono a salvare la conferma della visione delle informative o di schede
+            </h4>
+            <button class="cookie-btn">ACCETTA</button>
+        </div>
+    </div>
+
+    <!--script-->
+    <script src="../cookie.js"></script>
+    <script src="../contextmenu.js"></script>
+</body>
