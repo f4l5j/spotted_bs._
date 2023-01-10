@@ -55,7 +55,7 @@ setTimeout(() => {
     introduzione3Container.classList.add("active");
   }
 }, 0);
-/*giochi1*/
+/*giochi1
 const giochi1Container = document.querySelector(".giochi1-container");
 const giochi1Button = document.querySelector(".giochi1-btn");
 
@@ -69,7 +69,6 @@ setTimeout(() => {
     giochi1Container.classList.add("active");
   }
 }, 0);
-/*giochi2*/
 const giochi2Container = document.querySelector(".giochi2-container");
 const giochi2Button = document.querySelector(".giochi2-btn");
 
@@ -81,5 +80,19 @@ giochi2Button.addEventListener("click", () => {
 setTimeout(() => {
   if (!localStorage.getItem("giochi2OK")) {
     giochi2Container.classList.add("active");
+  }
+}, 0);*/
+/*v2*/
+const v2Container = document.querySelector(".v2-container");
+const v2Button = document.querySelector(".v2-btn");
+
+v2Button.addEventListener("click", () => {
+  v2Container.classList.remove("active");
+  localStorage.setItem("v2OK", "true");
+});
+
+setTimeout(() => {
+  if (!localStorage.getItem("v2OK")) {
+    v2Container.classList.add("active");
   }
 }, 0);
