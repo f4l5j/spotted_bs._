@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
   <link rel="shortcut icon" href="icons/icon.ico" />
   <link rel="stylesheet" href="style.css">
@@ -92,7 +91,120 @@
     </div>
     
   <!--fine navmenu-->
-
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.js"></script>
+  <style type="text/css">
+  #overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  filter:alpha(opacity=70);
+  -moz-opacity:0.7;
+  -khtml-opacity: 0.7;
+  opacity: 0.7;
+  z-index: 100;
+  display: none;
+  }
+  .cnt223 a{
+  text-decoration: none;
+  }
+  .popup{
+  width: 80%;
+  display: block;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin:70% 10% 20% 9%;
+  position: fixed;
+  z-index: 101;
+  }
+  .cnt223{
+  width:80%;
+  min-height: 150px;
+  background: #f3f3f3;
+  position: relative;
+  z-index: 103;
+  padding: 15px 35px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #000;
+  }
+  .cnt223 p{
+  clear: both;
+      color: #555555;
+      /* text-align: justify; */
+      font-size: 20px;
+      
+  text-align: center;
+    font-family: 'Montserrat-Light';
+  }
+  .cnt223 p a{
+  color: #d91900;
+  font-weight: bold;
+  }
+  .cnt223 .x{
+  float: right;
+  height: 35px;
+  left: 22px;
+  position: relative;
+  top: -25px;
+  width: 34px;
+  }
+  .cnt223 .x:hover{
+  cursor: pointer;
+  }
+  #flex_button{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+  }
+  .close{
+    color: #d91900;
+    font-family: 'Montserrat-Light';
+  }
+  .vai{
+    color: #313131;
+    font-family: 'Montserrat-Light';
+  }
+  @font-face {
+    font-family: 'Montserrat-Light';
+    src: url('fonts/Montserrat/Montserrat-Light.ttf') format('truetype');;
+ }
+  </style>
+  <script type='text/javascript'>
+  $(function(){
+  var overlay = $('<div id="overlay"></div>');
+  overlay.show();
+  overlay.appendTo(document.body);
+  $('.popup').show();
+  $('.close').click(function(){
+  $('.popup').hide();
+  overlay.appendTo(document.body).remove();
+  return false;
+  });
+  
+  
+   
+  
+  $('.x').click(function(){
+  $('.popup').hide();
+  overlay.appendTo(document.body).remove();
+  return false;
+  });
+  });
+  </script>
+  <div class='popup'>
+  <div class='cnt223'>
+  <p>
+  Vuoi fare un brevissimo sondaggio?
+  </p>
+  <div id="flex_button">
+  <a href='' class='close'>Già fatto</a>
+  <a href='bug.html' class='vai'>Vai</a>
+  </div>
+  
+  </div>
+  </div>
 
   <img class="mainlogo1" src="images/logo.webp" alt="logo">
   <div id="sfctl9cl7ndnq9jxufn7fsr5sm7b51qe6zg"></div> <script type="text/javascript" src="https://counter6.optistats.ovh/private/counter.js?c=tl9cl7ndnq9jxufn7fsr5sm7b51qe6zg&down=async" async></script> <noscript><a href="https://www.freecounterstat.com" title="free page counter"><img src="https://counter6.optistats.ovh/private/freecounterstat.php?c=tl9cl7ndnq9jxufn7fsr5sm7b51qe6zg" border="0" title="free page counter" alt="free page counter"></a></noscript>
