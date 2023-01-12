@@ -1171,6 +1171,16 @@ margin:20px;
     margin-bottom: 80px
 }
 #sfctl9cl7ndnq9jxufn7fsr5sm7b51qe6zg{
+    display: none;
+    position:absolute;
+    top:3%;
+    left:20%;
+    z-index:2000000;
+    opacity: 0;
+    transform: scale(0.02);
+}
+#sfc5uukqgn51z9tn23hzpkwrfaz44t85ra4{
+    display: none;
     position:absolute;
     top:3%;
     left:20%;
