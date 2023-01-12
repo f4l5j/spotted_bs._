@@ -96,3 +96,17 @@ setTimeout(() => {
     v2Container.classList.add("active");
   }
 }, 0);
+/*v2*/
+const merchContainer = document.querySelector(".merch-container");
+const merchButton = document.querySelector(".merch-btn");
+
+merchButton.addEventListener("click", () => {
+  merchContainer.classList.remove("active");
+  localStorage.setItem("merchOK", "true");
+});
+
+setTimeout(() => {
+  if (!localStorage.getItem("merchOK")) {
+    merchContainer.classList.add("active");
+  }
+}, 0);
